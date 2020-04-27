@@ -1,5 +1,8 @@
-name: 'Git Commit Changes'
-description: 'Commits changed files back to the repository'
+name: 'Git Commit/Push Changes'
+description: 'Commits changed files back to the upstream repository'
+branding:
+  icon: git-commit
+  color: blue
 inputs:
   email:
     description: The committer's email address
