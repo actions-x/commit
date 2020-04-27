@@ -1,0 +1,34 @@
+name: 'Git Commit Changes'
+description: 'Commits changed files back to the repository'
+inputs:
+  email:
+    description: The committer's email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: The committer's name
+    required: true
+    default: ${{ github.actor }}
+  message:
+    description: The commit message
+    required: true
+    default: Automatically updated using GitHub Actions
+  branch:
+    description: The branch to push the changes back to, defaults to the current branch
+    required: true
+    default: ${{ github.ref }}
+  files:
+    description: The files to add separated by space, defaults to every file
+    required: true
+    default: .
+  repository:
+    description: The repository to push the code to, defaults to origin (e.g. this repository)
+    required: true
+    default: origin
+  token:
+    description: The token used to push the code, not needed if you push to the same repository
+    required: true
+    default: ${{ github.token }}
+runs:
+  using: docker
+  image: Dockerfile
