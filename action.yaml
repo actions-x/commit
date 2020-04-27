@@ -1,5 +1,5 @@
 name: 'Git Commit/Push Changes'
-description: 'Commits changed files back to the upstream repository'
+description: 'Commit changed files back to the upstream repository'
 branding:
   icon: git-commit
   color: blue
