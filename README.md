@@ -1,5 +1,7 @@
 Commit and push changes back upstream. Lightweight action using only alpine and shell scripting.
 
+> Use v2, GitHub changed the way checkout works so v1 no longer works
+
 ## Usage
 
 ```yaml
@@ -18,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
     # make the changes between checkout and push
     - name: push
-      uses: actions-x/commit@v1
+      uses: actions-x/commit@v2
 
 ```
 
@@ -52,7 +54,7 @@ jobs:
       uses: actions/checkout@v2
     # make the changes between checkout and push
     - name: push
-      uses: actions-x/commit@v1
+      uses: actions-x/commit@v2
       with:
         email: me@example.com
         name: GitHub Actions Autocommitter

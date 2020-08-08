@@ -30,4 +30,4 @@ git checkout "$CURRENT_BRANCH"
 git merge actions-x-temp-branch
 git branch -d actions-x-temp-branch
 
-git push "$INPUT_REPOSITORY" "$CURRENT_BRANCH:$BRANCH" $FORCE
+git push "$INPUT_REPOSITORY" "$CURRENT_BRANCH:$TARGET_BRANCH" $FORCE
