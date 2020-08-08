@@ -32,6 +32,7 @@ All parameters are optional, with no parameters provided, these defaults are use
 - repository - you can specify the repository to push the code to, default is `origin` (e.g. the same repository)
 - token - if you want to push to a different repository you need to provide your own token, otherwise you can leave it
 to the default value which is provided by GitHub Actions and works for the same repository
+- force - you can specify true to perform force push, default is to not use force push
 
 ## Full reference
 
@@ -59,5 +60,6 @@ jobs:
         files: file1 file2 directory directory2/file3
         repository: https://github.com/Example/SomeOtherRepository
         token: ${{ secrets.MY_SECRET_TOKEN }}
+        force: true
 
 ```

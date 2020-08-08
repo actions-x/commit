@@ -32,6 +32,10 @@ inputs:
     description: The token used to push the code, not needed if you push to the same repository
     required: true
     default: ${{ github.token }}
+  force:
+    description: Whether to perform force push
+    required: true
+    default: '0'
 runs:
   using: docker
   image: Dockerfile
