@@ -26,7 +26,7 @@ jobs:
 
 All parameters are optional, with no parameters provided, these defaults are used:
 
-- name  - the actor name, so if your github name is `example` the name is be `example` 
+- name  - the actor name, so if your github name is `example` the name will be `example` 
 - email - the actor name @localhost, if your github name is `example` the email is `example@localhost`
 - message - `Automatically updated using GitHub Actions`
 - branch - defaults to the branch that triggered the action, so if you pushed to master, the branch is `master`
