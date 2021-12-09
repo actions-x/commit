@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd "$INPUT_DIRECTORY" || exit 1
+
 CURRENT_BRANCH=$(echo "$GITHUB_REF" | sed "s@refs/heads/@@")
 TARGET_BRANCH=$INPUT_BRANCH
 case $TARGET_BRANCH in "refs/heads/"*)
@@ -20,8 +22,6 @@ echo "  password $INPUT_TOKEN" >> "$HOME/.netrc"
 
 git config user.email "$INPUT_EMAIL"
 git config user.name "$INPUT_NAME"
-
-cd "$INPUT_DIRECTORY" || exit 1
 
 # shellcheck disable=SC2086
 git add $INPUT_FILES -v
