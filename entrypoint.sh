@@ -21,6 +21,12 @@ echo "  password $INPUT_TOKEN" >> "$HOME/.netrc"
 git config user.email "$INPUT_EMAIL"
 git config user.name "$INPUT_NAME"
 
+echo "---------------------"
+echo "environment variables"
+echo "---------------------"
+printenv
+echo "---------------------"
+
 cd "$INPUT_WORKING_DIR" || exit 1
 
 # shellcheck disable=SC2086
