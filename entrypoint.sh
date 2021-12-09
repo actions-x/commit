@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CURRENT_BRANCH=${GITHUB_REF##*/}
+CURRENT_BRANCH=$(echo "$GITHUB_REF" | sed "s@refs/heads/@@")
 TARGET_BRANCH=$INPUT_BRANCH
 case $TARGET_BRANCH in "refs/heads/"*)
   TARGET_BRANCH=$(echo "$TARGET_BRANCH" | sed "s@refs/heads/@@")
