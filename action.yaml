@@ -36,6 +36,10 @@ inputs:
     description: Whether to perform force push
     required: true
     default: '0'
+  working-dir:
+    description: The working directory that will be used for git commands
+    required: true
+    default: '.'
 runs:
   using: docker
   image: Dockerfile
