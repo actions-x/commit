@@ -36,7 +36,7 @@ inputs:
     description: Whether to perform force push
     required: true
     default: '0'
-  working-dir:
+  directory:
     description: The working directory that will be used for git commands
     required: true
     default: '.'
