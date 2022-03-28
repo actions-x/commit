@@ -1,4 +1,4 @@
-Commit and push changes back upstream. Lightweight action using only alpine and shell scripting.
+directoryCommit and push changes back upstream. Lightweight action using only alpine and shell scripting.
 
 > Don't use v1 anymore as GitHub changed the way checkout works so it no longer works. 
 
@@ -64,6 +64,6 @@ jobs:
         repository: https://github.com/Example/SomeOtherRepository
         token: ${{ secrets.MY_SECRET_TOKEN }}
         force: true
-        working-dir: path/to/different/repo
+        directory: path/to/different/repo
 
 ```
