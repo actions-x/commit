@@ -1,4 +1,4 @@
-directoryCommit and push changes back upstream. Lightweight action using only alpine and shell scripting.
+Commit and push changes back upstream. Lightweight action using only alpine and shell scripting.
 
 > Don't use v1 anymore as GitHub changed the way checkout works so it no longer works. 
 
