@@ -1,6 +1,6 @@
 Commit and push changes back upstream. Lightweight action using only alpine and shell scripting.
 
-> Don't use v1 anymore as GitHub changed the way checkout works so it no longer works. 
+> Don't use v4 anymore as GitHub changed the way checkout works so it no longer works. 
 
 ## Usage
 
