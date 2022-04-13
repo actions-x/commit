@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v2
     # make the changes between checkout and push
     - name: push
-      uses: actions-x/commit@v2
+      uses: actions-x/commit@v5
 
 ```
 
@@ -55,7 +55,7 @@ jobs:
       uses: actions/checkout@v2
     # make the changes between checkout and push
     - name: push
-      uses: actions-x/commit@v2
+      uses: actions-x/commit@v5
       with:
         email: me@example.com
         name: GitHub Actions Autocommitter
