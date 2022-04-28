@@ -1,13 +1,13 @@
 #!/bin/sh
 
-cd "$INPUT_DIRECTORY" || exit 1
-
 git config --global --add safe.directory /github/workspace
 if case $INPUT_DIRECTORY in "/"*) ;; *) false;; esac; then
   git config --global --add safe.directory "$INPUT_DIRECTORY"
 else
   git config --global --add safe.directory "/github/workspace/$INPUT_DIRECTORY"
 fi
+
+cd "$INPUT_DIRECTORY" || exit 1
 
 CURRENT_BRANCH=$(echo "$GITHUB_REF" | sed "s@refs/heads/@@")
 TARGET_BRANCH=$INPUT_BRANCH
