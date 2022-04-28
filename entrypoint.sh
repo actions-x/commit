@@ -1,10 +1,5 @@
 #!/bin/sh
 
-if ! git rev-parse --git-dir > /dev/null 2>&1; then
-  echo "You are not inside a git work tree, please check that you're not using outdated version of git and your repository isn't checked out using a tarball instead."
-  exit 1
-fi
-
 git config --global --add safe.directory /github/workspace
 
 cd "$INPUT_DIRECTORY" || exit 1
