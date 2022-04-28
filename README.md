@@ -1,3 +1,5 @@
+[![Tests](https://github.com/actions-x/commit/actions/workflows/test.yaml/badge.svg)](https://github.com/actions-x/commit/actions/workflows/test.yaml)
+
 Commit and push changes back upstream. Lightweight action using only alpine and shell scripting.
 
 > Don't use v4 anymore as GitHub changed the way checkout works so it no longer works. 
