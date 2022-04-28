@@ -3,7 +3,7 @@
 cd "$INPUT_DIRECTORY" || exit 1
 
 git config --global --add safe.directory /github/workspace
-if case $HOST in "/"*) ;; *) false;; esac; then
+if case $INPUT_DIRECTORY in "/"*) ;; *) false;; esac; then
   git config --global --add safe.directory "$INPUT_DIRECTORY"
 else
   git config --global --add safe.directory "/github/workspace/$INPUT_DIRECTORY"
