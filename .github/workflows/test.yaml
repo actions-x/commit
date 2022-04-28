@@ -1,9 +1,7 @@
 name: Tests
 
 on:
-  push:
-    branches:
-      - master
+  - push
 
 jobs:
   test_single:
