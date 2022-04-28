@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_single:
+    name: Test single checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.4.2
+      - name: Create test file
+        run: date > test.txt
+      - name: Commit
+        uses: .
+        with:
+          message: Create test file for single repos
+          branch: test-single-repo
+          force: true
