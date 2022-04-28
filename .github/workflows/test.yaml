@@ -51,4 +51,4 @@ jobs:
           message: Create test file for multi repos (absolute path)
           branch: test-multi-repo-absolute
           force: true
-          directory: /home/runner/work/commit/commit/commit
+          directory: /home/runner/work/commit/commit/repo
