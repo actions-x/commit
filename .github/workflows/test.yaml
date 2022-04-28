@@ -18,3 +18,20 @@ jobs:
           message: Create test file for single repos
           branch: test-single-repo
           force: true
+  test_multi:
+    name: Test multi checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.4.2
+        with:
+          path: repo
+      - name: Create test file
+        run: date > repo/test.txt
+      - name: Commit
+        uses: ./
+        with:
+          message: Create test file for multi repos
+          branch: test-multi-repo
+          force: true
+          directory: repo
