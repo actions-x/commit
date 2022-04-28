@@ -35,3 +35,20 @@ jobs:
           branch: test-multi-repo
           force: true
           directory: repo
+  test_multi_absolute:
+    name: Test multi checkout (absolute path)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.4.2
+        with:
+          path: repo
+      - name: Create test file
+        run: date > repo/test.txt
+      - name: Commit
+        uses: ./repo
+        with:
+          message: Create test file for multi repos (absolute path)
+          branch: test-multi-repo-absolute
+          force: true
+          directory: /home/runner/work/commit/commit/commit
