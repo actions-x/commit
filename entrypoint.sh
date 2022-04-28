@@ -2,6 +2,7 @@
 
 cd "$INPUT_DIRECTORY" || exit 1
 
+git config --global --add safe.directory /github/workspace
 git config --global --add safe.directory "$INPUT_DIRECTORY"
 
 CURRENT_BRANCH=$(echo "$GITHUB_REF" | sed "s@refs/heads/@@")
