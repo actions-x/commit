@@ -29,7 +29,7 @@ jobs:
       - name: Create test file
         run: date > repo/test.txt
       - name: Commit
-        uses: ./
+        uses: ./repo
         with:
           message: Create test file for multi repos
           branch: test-multi-repo
