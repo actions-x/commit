@@ -13,7 +13,7 @@ jobs:
       - name: Create test file
         run: date > test.txt
       - name: Commit
-        uses: .
+        uses: ./
         with:
           message: Create test file for single repos
           branch: test-single-repo
